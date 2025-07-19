@@ -32,7 +32,7 @@
 
     const loader = new GLTFLoader();
 
-    // You will update this URL after deploying to Vercel
+    // ✅ Your pikachu.glb must be uploaded along with index.html in the same folder
     const modelURL = 'pikachu.glb';
 
     loader.load(modelURL, (gltf) => {
@@ -40,7 +40,7 @@
       model.scale.set(1, 1, 1);
       scene.add(model);
     }, undefined, (error) => {
-      console.error('Error loading model:', error);
+      console.error('Model loading error:', error);
     });
 
     window.addEventListener('resize', () => {
